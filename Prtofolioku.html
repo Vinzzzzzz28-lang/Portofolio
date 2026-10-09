@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vicko Ardiansyah Reyes — Portfolio 2025 // OVERLORD</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Anton & Syne & Space Grotesk & Orbitron -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Cinzel:wght@700;900&amp;family=Orbitron:wght@500;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            monumental: ['"Anton"', 'sans-serif'],
+            display: ['"Syne"', 'sans-serif'],
+            cinematic: ['"Cinzel"', 'serif'],
+            hud: ['"Orbitron"', 'sans-serif'],
+            body: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            charcoalDark: '#08090A',
+            steelBlack: '#0E1113',
+            doomGreen: '#1A3A2A',
+            emeraldDeep: '#235338',
+            emeraldAccent: '#4EAC7A',
+            emeraldGlow: '#34D399',
+            chromeSteel: '#E2E8F0',
+            steelMuted: '#94A3B8',
+          },
+          boxShadow: {
+            doomGreenGlow: '0 0 35px rgba(46, 111, 64, 0.45)',
+            metallicSteel: '0 0 25px rgba(226, 232, 240, 0.18)',
+            stealthCard: 'inset 0 1px 0 rgba(255,255,255,0.08), 0 20px 40px rgba(0,0,0,0.85)',
+            hudGlow: '0 0 15px rgba(52, 211, 153, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Visual Styles -->
+<style data-purpose="custom-theme">
+    body {
+      background-color: #08090A;
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(29, 74, 56, 0.32) 0%, transparent 60%),
+        radial-gradient(circle at 80% 60%, rgba(20, 36, 28, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(20, 24, 28, 0.9) 0%, transparent 50%),
+        linear-gradient(180deg, #070809 0%, #0D1012 50%, #060708 100%);
+      color: #e2e8f0;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Doom rain streak & stark high-contrast texture overlay */
+    .rain-overlay::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: repeating-linear-gradient(105deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 9px);
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.65;
+    }
+
+    /* Subtle tactical cyber grid */
+    .grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    .brutalist-border {
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .chrome-gradient-text {
+      background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 45%, #94A3B8 85%, #64748B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .emerald-gradient-text {
+      background: linear-gradient(180deg, #A7F3D0 0%, #34D399 40%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .metallic-bevel {
+      border-top: 1px solid rgba(226, 232, 240, 0.35);
+      border-left: 1px solid rgba(226, 232, 240, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+      border-right: 1px solid rgba(0, 0, 0, 0.9);
+    }
+
+    /* Scanline flicker subtle */
+    .scanline {
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      background-size: 100% 4px;
+    }
+  </style>
+<!-- END: Custom Visual Styles -->
+</head>
+<body class="rain-overlay relative min-h-screen text-slate-200 antialiased selection:bg-emerald-500 selection:text-black">
+<!-- BEGIN: Global Floating Telemetry Header Bar -->
+<div class="fixed top-0 left-0 right-0 z-50 bg-[#07090b]/85 border-b border-slate-800/80 backdrop-blur-md px-4 py-1.5 flex items-center justify-between text-[11px] font-mono tracking-widest text-slate-400">
+<div class="flex items-center space-x-4">
+<span class="inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      LATVERIA CORE // ACTIVE
+    </span>
+<span class="hidden md:inline text-slate-600">|</span>
+<span class="hidden md:inline text-slate-400">FPS: 60.0 // LATENCY: 12ms</span>
+<span class="hidden lg:inline text-slate-600">|</span>
+<span class="hidden lg:inline text-slate-500">NODE: VICKO-SYS.DOOM-EDITION</span>
+</div>
+<div class="flex items-center space-x-6">
+<div class="hidden sm:flex items-center gap-4 text-[10px]">
+<span class="text-slate-400">IG: <a class="text-emerald-400 hover:underline" href="https://instagram.com/vicko.saris" target="_blank">@vicko.saris</a></span>
+<span class="text-slate-400">GH: <a class="text-emerald-400 hover:underline" href="https://github.com/Vinzzzzzz28-lang" target="_blank">Vinzzzzzz28-lang</a></span>
+</div>
+<a class="px-2.5 py-0.5 bg-emerald-950/80 border border-emerald-600/50 text-emerald-300 font-bold hover:bg-emerald-900 transition-colors" href="mailto:reyes.var28@gmail.com">
+      COMMISSION ME
+    </a>
+</div>
+</div>
+<!-- Floating Navigation Dock -->
+<nav class="fixed top-12 left-1/2 -translate-x-1/2 z-40" data-purpose="floating-navigation">
+<div class="flex items-center gap-1.5 p-1.5 bg-[#0E1113]/95 border border-slate-700/70 backdrop-blur-md shadow-2xl shadow-black text-xs font-semibold tracking-widest font-display uppercase">
+<a class="px-4 py-1.5 text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all duration-200" href="#hero">DOMINION</a>
+<a class="px-4 py-1.5 text-slate-300 hover:text-emerald-400 hover:bg-slate-800/80 transition-all duration-200" href="#profile">PROFIL</a>
+<a class="px-4 py-1.5 text-slate-300 hover:text-emerald-400 hover:bg-slate-800/80 transition-all duration-200" href="#projects">ARSENAL</a>
+<a class="px-4 py-1.5 bg-gradient-to-r from-emeraldDeep to-emeraldAccent text-slate-950 font-black tracking-widest hover:brightness-110 transition-all duration-200 shadow-md shadow-emerald-950/70" href="#contact">CONTACT DIRECT</a>
+</div>
+</nav>
+<!-- END: SiteNavigation -->
+<main class="w-full flex flex-col items-center pt-10">
+<!-- ========================================================================= -->
+<!-- BEGIN: HeroSection (Section 1) -->
+<!-- ========================================================================= -->
+<section class="w-full min-h-screen relative flex flex-col justify-between pt-16 pb-12 px-6 sm:px-12 lg:px-16 border-b border-slate-800/80 overflow-hidden grid-pattern" data-purpose="hero-start-screen" id="hero">
+<!-- Ambient brutalist lights -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(30,68,48,0.38)_0%,transparent_65%)] pointer-events-none"></div>
+<div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-emerald-900/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-96 h-96 bg-slate-700/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- HUD Coordinates watermark in corners -->
+<div class="absolute top-20 left-6 text-[10px] font-mono text-slate-600 select-none hidden md:block">
+    SYS_ID: LATVERIA-DOOM-2025 // SEC_01<br/>
+    COORDS: 47°12'N 19°03'E // GRID: OMEGA
+  </div>
+<div class="absolute top-20 right-6 text-[10px] font-mono text-right text-slate-600 select-none hidden md:block">
+    PROTOCOL: DECREE_VICKO_REYES<br/>
+    DIRECT_LINK: reyes.var28@gmail.com
+  </div>
+<!-- Main Hero Content Container -->
+<div class="w-full max-w-7xl mx-auto my-auto py-6 flex flex-col gap-8 z-10">
+<!-- Top Metadata Badge & Title Headline -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-800/80 pb-6">
+<div>
+<div class="inline-flex items-center space-x-2 px-3 py-1 mb-3 bg-[#0B1012] border border-emerald-600/40 text-xs font-mono text-emerald-400 tracking-[0.25em]">
+<span class="w-2.5 h-2.5 bg-emerald-400 inline-block shadow-[0_0_8px_#34d399]"></span>
+<span>SYSTEM // OVERLORD v2025 • DOOM EDITION</span>
+</div>
+<h1 class="text-6xl sm:text-8xl lg:text-9xl font-black font-monumental tracking-tight leading-none uppercase select-none">
+<span class="chrome-gradient-text drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)]">PORTFOLIO</span>
+<span class="emerald-gradient-text drop-shadow-[0_0_35px_rgba(78,172,122,0.4)] ml-2">2025</span>
+</h1>
+<p class="mt-3 text-sm sm:text-base text-slate-300 font-body max-w-2xl border-l-2 border-emerald-500 pl-3">
+          "Level Up Your Visuals: Mengubah ide biasa jadi konten digital bernyawa dengan sentuhan visual interaktif dan sinematik."
+        </p>
+</div>
+<!-- Quick Action CTAs & Telemetry Badge -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[280px]">
+<a class="flex items-center justify-between px-5 py-3 bg-gradient-to-r from-emeraldDeep to-emeraldAccent text-slate-950 font-monumental font-bold tracking-widest text-sm hover:brightness-110 shadow-doomGreenGlow transition-all" href="mailto:reyes.var28@gmail.com">
+<span>FORGE DIRECT INQUIRY</span>
+<span class="text-xs font-mono">✉ GMAIL</span>
+</a>
+<div class="grid grid-cols-2 gap-2 text-[11px] font-mono">
+<a class="p-2 bg-[#0E1215] border border-slate-800 hover:border-emerald-500 text-slate-300 text-center transition-colors" href="https://instagram.com/vicko.saris" target="_blank">
+            IG: @vicko.saris
+          </a>
+<a class="p-2 bg-[#0E1215] border border-slate-800 hover:border-emerald-500 text-slate-300 text-center transition-colors" href="https://github.com/Vinzzzzzz28-lang" target="_blank">
+            GH: Vinzzzzzz28-lang
+          </a>
+</div>
+</div>
+</div>
+<!-- HORIZONTAL LANDSCAPE HERO BANNER WITH IMAGE_5 -->
+<div class="relative w-full group" data-purpose="hero-horizontal-banner">
+<!-- Glow halo -->
+<div class="absolute -inset-1.5 bg-gradient-to-r from-emerald-600 via-slate-700 to-emerald-900 opacity-60 blur-xl group-hover:opacity-90 transition duration-700"></div>
+<!-- Frame Container with metallic styling -->
+<div class="relative w-full overflow-hidden border-2 border-slate-600/80 bg-[#090D0F] shadow-2xl metallic-bevel">
+<!-- HUD Header line on image -->
+<div class="w-full bg-[#080B0D] px-4 py-2 border-b border-slate-800 flex items-center justify-between font-mono text-[11px] text-slate-400">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-emerald-400"></span>
+<span class="text-white font-bold">TACTICAL_FEED // SOVEREIGN_ASPECT_RATIO_21:9</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-emerald-400 font-mono">RESOLUTION: 4K HIGH-BITRATE</span>
+<span class="hidden sm:inline text-slate-500">SUBJECT: VICKO A. REYES (OVERLORD)</span>
+</div>
+</div>
+<!-- 21:9 / 16:9 Landscape Horizontal Image Wrapper -->
+<div class="relative w-full aspect-[21/9] sm:aspect-[24/9] md:aspect-[21/9] overflow-hidden bg-black flex items-center justify-center">
+<img alt="Doctor Doom Sovereign Banner - Vicko Ardiansyah Reyes" class="w-full h-full object-cover object-center filter contrast-125 brightness-100 group-hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-VY7ajfWerJjrOYlR8CcHK7Sj0cfSVlelNslULoY2KoWGIczI1BDZ1TA1EjdkVEaPSyUdDb_34rT918wBUX3-KdfdHBGLR7v1G5fL_Ce3_GPg-9OZ1tK1LABrDb1iEc1q_Xze3PhAuS5EbspowBQIQ2_ICQ9baH8gryFeJ4GynMTH2Eb4m58oNZ0lo8ppCzOV-l6h-o0eqgK_aPd-MeSoffbJqcD3CZ-67gWceGl2H8XM2GBu2Yt0l9o1cF7OCQ_Fa2c"/>
+<!-- Vignette Gradients -->
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 pointer-events-none"></div>
+<!-- Tactical HUD Reticle Overlay in Center -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity">
+<div class="w-32 h-32 border border-emerald-500/50 rounded-full flex items-center justify-center">
+<div class="w-16 h-16 border border-emerald-400/80 rounded-full"></div>
+</div>
+<div class="absolute w-48 h-[1px] bg-emerald-500/40"></div>
+<div class="absolute h-48 w-[1px] bg-emerald-500/40"></div>
+</div>
+<!-- Bottom Banner Overlay Badges -->
+<div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-end justify-between gap-3 pointer-events-none">
+<div class="bg-black/85 backdrop-blur-md border border-slate-700/80 p-3 max-w-md pointer-events-auto">
+<div class="flex items-center gap-2 text-[10px] font-mono text-emerald-400 uppercase tracking-widest">
+<span class="w-2 h-2 bg-emerald-400"></span> COMMANDER SPECIFICATION
+              </div>
+<h3 class="font-monumental text-white text-base sm:text-xl tracking-wider uppercase mt-0.5">
+                VICKO ARDIANSYAH REYES
+              </h3>
+<p class="text-[11px] font-mono text-slate-400">ARCHITECT OF MULTI-DISCIPLINARY DIGITAL EXPERIENCES</p>
+</div>
+<div class="hidden sm:flex items-center gap-2 pointer-events-auto">
+<div class="bg-black/90 border border-emerald-600/60 px-3 py-2 text-right font-mono">
+<div class="text-[10px] text-slate-400 uppercase">EXPERIENCE INDEX</div>
+<div class="text-sm font-bold text-emerald-400">5+ YEARS DISCIPLINE</div>
+</div>
+<div class="bg-black/90 border border-slate-700 px-3 py-2 text-right font-mono">
+<div class="text-[10px] text-slate-400 uppercase">PRODUCTION REACH</div>
+<div class="text-sm font-bold text-white">1.5M+ AUDIENCE</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry bottom strip -->
+<div class="w-full bg-[#080B0D] px-4 py-2 border-t border-slate-800 flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-400">
+<div class="flex items-center gap-3">
+<span class="text-emerald-400 font-bold">STATUS:</span>
+<span>HIGH PERFORMANCE ENGINE</span>
+<span class="text-slate-600">/</span>
+<span>NO AI AUTO-FILL • 100% HANDCRAFTED VISUAL CRAFT</span>
+</div>
+<div class="text-slate-500 text-[10px]">
+            LATVERIA_OS // ENCRYPTED COMMS: ON
+          </div>
+</div>
+</div>
+</div>
+<!-- HUD Stats Bar / Telemetry Ticker across Section 1 -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 font-mono" data-purpose="hud-telemetry-grid">
+<div class="bg-[#0B0E11] border border-slate-800 p-3.5 metallic-bevel">
+<div class="text-[10px] text-slate-400 uppercase tracking-wider flex justify-between items-center">
+<span>PROJECTS FORGED</span>
+<span class="text-emerald-400">▲</span>
+</div>
+<div class="text-2xl sm:text-3xl font-black font-monumental text-white mt-1">50+ COMPLETED</div>
+<div class="text-[10px] text-emerald-400 mt-1">Commercial, Merch &amp; Motion</div>
+</div>
+<div class="bg-[#0B0E11] border border-slate-800 p-3.5 metallic-bevel">
+<div class="text-[10px] text-slate-400 uppercase tracking-wider flex justify-between items-center">
+<span>TOTAL REACH</span>
+<span class="text-emerald-400">⚡</span>
+</div>
+<div class="text-2xl sm:text-3xl font-black font-monumental text-white mt-1">1.5M+ IMPRESSIONS</div>
+<div class="text-[10px] text-slate-400 mt-1">High retention pacing algorithms</div>
+</div>
+<div class="bg-[#0B0E11] border border-slate-800 p-3.5 metallic-bevel">
+<div class="text-[10px] text-slate-400 uppercase tracking-wider flex justify-between items-center">
+<span>CLIENT SATISFACTION</span>
+<span class="text-emerald-400">★</span>
+</div>
+<div class="text-2xl sm:text-3xl font-black font-monumental text-white mt-1">99.8% FIDELITY</div>
+<div class="text-[10px] text-emerald-400 mt-1">Precision delivery &amp; revisions</div>
+</div>
+<div class="bg-[#0B0E11] border border-slate-800 p-3.5 metallic-bevel">
+<div class="text-[10px] text-slate-400 uppercase tracking-wider flex justify-between items-center">
+<span>PIPELINE CAPACITY</span>
+<span class="text-emerald-400">● OPEN</span>
+</div>
+<div class="text-2xl sm:text-3xl font-black font-monumental text-emerald-400 mt-1">Q1/Q2 2025</div>
+<div class="text-[10px] text-slate-400 mt-1">Direct bookings via email</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation / Section Indicator -->
+<footer class="w-full max-w-7xl mx-auto flex justify-between items-center text-[11px] font-mono text-slate-500 border-t border-slate-800/80 pt-4 z-10">
+<div class="flex items-center gap-2">
+<span class="text-emerald-400">▼</span> PROCEED TO DOSSIER &amp; PROFILE
+    </div>
+<div class="hidden sm:block">
+      DOCTOR DOOM AESTHETIC // BRUTALIST PRECISION // JAKARTA, ID
+    </div>
+</footer>
+</section>
+<!-- END: HeroSection -->
+<!-- ========================================================================= -->
+<!-- BEGIN: AboutMeSection (Section 2) -->
+<!-- ========================================================================= -->
+<section class="w-full min-h-screen py-20 px-6 sm:px-12 lg:px-16 border-b border-slate-800/80 relative flex flex-col justify-center grid-pattern" data-purpose="about-me-screen" id="profile">
+<!-- Ambient Emerald Cloak Glow -->
+<div class="absolute -top-32 right-1/4 w-96 h-96 bg-emerald-950/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-10 left-10 w-96 h-96 bg-slate-800/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Corner watermark coordinates -->
+<div class="absolute top-10 right-10 text-[10px] font-mono text-slate-600 select-none hidden lg:block">
+    SECURITY_LEVEL: ARCHON // PERSONNEL_RECORD_02<br/>
+    STATUS: HIGHLY ACTIVE // CODED: VAR28
+  </div>
+<div class="w-full max-w-7xl mx-auto flex flex-col space-y-10 z-10">
+<!-- Top Dossier Header Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-4 gap-4">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-0.5 bg-slate-900 border border-slate-700 font-mono text-xs text-emerald-400 mb-2">
+<span>CLASSIFIED DOSSIER // REYES PROFILE</span>
+<span class="text-slate-500">|</span>
+<span class="text-slate-300">INDONESIA</span>
+</div>
+<h2 class="text-4xl sm:text-6xl font-black font-monumental tracking-wide text-white uppercase">
+          PROFIL &amp; <span class="emerald-gradient-text">CAPABILITIES</span>
+</h2>
+</div>
+<!-- Quick Contact Pills -->
+<div class="flex flex-wrap gap-2 text-xs font-mono">
+<a class="px-3 py-1.5 bg-[#0C1215] border border-emerald-600/60 hover:bg-emerald-950 text-emerald-300 transition-colors flex items-center gap-1.5" href="mailto:reyes.var28@gmail.com">
+<span>✉</span> reyes.var28@gmail.com
+        </a>
+<a class="px-3 py-1.5 bg-[#0C1215] border border-slate-700 hover:border-emerald-400 text-slate-300 transition-colors flex items-center gap-1.5" href="https://instagram.com/vicko.saris" target="_blank">
+<span>◈</span> @vicko.saris
+        </a>
+<a class="px-3 py-1.5 bg-[#0C1215] border border-slate-700 hover:border-emerald-400 text-slate-300 transition-colors flex items-center gap-1.5" href="https://github.com/Vinzzzzzz28-lang" target="_blank">
+<span>⬡</span> Vinzzzzzz28-lang
+        </a>
+</div>
+</div>
+<!-- HORIZONTAL LANDSCAPE IMAGE_1 SECTION BANNER -->
+<div class="relative w-full group" data-purpose="about-horizontal-banner">
+<div class="absolute -inset-1 bg-gradient-to-r from-emerald-800/40 via-slate-800/40 to-emerald-950/40 blur-lg group-hover:opacity-100 transition-opacity"></div>
+<div class="relative w-full border border-slate-700/80 bg-[#0A0E11] p-2 metallic-bevel shadow-doomGreenGlow">
+<!-- Landscape aspect ratio 16:9 / 21:9 image container -->
+<div class="relative w-full aspect-[21/9] sm:aspect-[24/8] overflow-hidden bg-black flex items-center justify-center">
+<img alt="Doctor Doom Throne Persona - Vicko Ardiansyah Reyes" class="w-full h-full object-cover object-center filter contrast-125 brightness-95 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXnQkplmVuX32PQn2OgxCM6KHAjb_3Ax6RRHX6aoC462zYoXZz8oXAVU2d9RAnhFNeRyhPKQyvwRU1OvzwljGiO40qU4_B4j521HtPYRPwAbnR9IAaJFHC8-PnITTlkkwPKS61uqM0FLSzT5WMdgMkH0E6_aUqGzFPwj6yiDeIJl8jM-kzB3nGW3OI0IlOoD5eC4N8diav95nTI4u0uKjacuXfW5-pto0zSR21Wyhp-IGt9L5mzuWJgevTB4XbpPGqhZw"/>
+<!-- Inner Shadow / Dark Vignette -->
+<div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/30 to-black/85"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50"></div>
+<!-- Overlay Metadata inside Landscape -->
+<div class="absolute top-4 left-4 right-4 flex justify-between items-center text-[11px] font-mono">
+<span class="px-2.5 py-1 bg-black/80 border border-emerald-500/50 text-emerald-400">
+              IDENTITY ARCHIVE // DOOM_GREEN_HOOD
+            </span>
+<span class="hidden sm:inline px-2.5 py-1 bg-black/80 border border-slate-700 text-slate-300">
+              FRAME RATIO: ULTRA-WIDE HORIZONTAL
+            </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
+<div>
+<p class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">TACTICAL CODE</p>
+<h4 class="text-xl sm:text-2xl font-monumental text-white tracking-widest uppercase">OVERLORD VISUAL REGIME</h4>
+<p class="text-xs text-slate-300 font-mono">Merging Cinema Lighting, Raw Brutalism &amp; Precision Motion</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-emerald-950/90 border border-emerald-500 text-emerald-300 font-mono text-xs font-bold">
+                VERIFIED ASSET // 2025
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3-Column Dense Dossier Layout (Bio, Arsenal, Experience & Telemetry) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Column 1: Extended Bio & Philosophy (4 cols) -->
+<div class="lg:col-span-5 flex flex-col space-y-5 bg-[#090D0F] border border-slate-800 p-6 metallic-bevel">
+<div class="flex items-center justify-between border-b border-slate-800 pb-3">
+<h3 class="text-xl font-bold font-monumental text-white tracking-wider uppercase flex items-center gap-2">
+<span class="w-3 h-3 bg-emerald-400 inline-block"></span>
+            BIOGRAPHY &amp; OPERATIONAL PHILOSOPHY
+          </h3>
+<span class="text-xs font-mono text-emerald-400">ID: VR-28</span>
+</div>
+<p class="text-slate-300 font-body text-sm leading-relaxed">
+          Halo! Saya kreator konten multi-disiplin yang hidup di persimpangan <strong class="text-emerald-300 font-medium">video editing, desain grafis, dan tipografi eksploratif</strong>.
+        </p>
+<p class="text-slate-300 font-body text-sm leading-relaxed">
+          Berangkat dari jalur autodidak dan rasa penasaran tanpa batas, saya terus mengasah insting visual dari tahun ke tahun. Fokus saya sederhana tapi esensial: bukan sekadar bikin visual yang keren di layar, melainkan merancang konten yang benar-benar beresonansi dengan audiens manusia nyata di platform yang bergerak cepat seperti Instagram dan TikTok. Bagi saya, setiap frame adalah peluang untuk bercerita dan membangun koneksi emosional.
+        </p>
+<!-- Key Principles / Value Pillars -->
+<div class="pt-3 border-t border-slate-800 space-y-2 font-mono text-xs">
+<div class="flex items-start gap-2">
+<span class="text-emerald-400 font-bold">01.</span>
+<span class="text-slate-300"><strong class="text-white">Precision Storytelling:</strong> Pacing ritmis yang menjaga retensi audiens di detik-detik krusial.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-emerald-400 font-bold">02.</span>
+<span class="text-slate-300"><strong class="text-white">Aesthetic Sovereignty:</strong> Tipografi kokoh, palet warna berkarakter gelap, &amp; komposisi tanpa kompromi.</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="text-emerald-400 font-bold">03.</span>
+<span class="text-slate-300"><strong class="text-white">Commercial Impact:</strong> Setiap asset dirancang menggerakkan metrik konversi dan brand engagement.</span>
+</div>
+</div>
+<!-- Endorsement quote box -->
+<div class="p-3 bg-black/60 border-l-2 border-emerald-400 font-mono text-xs text-slate-400 italic">
+          "Visual yang kuat bukan sekadar estetika dekoratif, melainkan senjata strategis dalam komunikasi massa."
+        </div>
+</div>
+<!-- Column 2 & 3: Arsenal, Metrics & Career Tracks (7 cols) -->
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<!-- Software Arsenal Grid with proficiency metrics -->
+<div class="bg-[#090D0F] border border-slate-800 p-6 metallic-bevel">
+<div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+<h4 class="text-xs font-mono font-bold tracking-[0.2em] text-emerald-400 uppercase">
+              SOFTWARE ARSENAL &amp; MASTERY MATRIX
+            </h4>
+<span class="text-[10px] font-mono text-slate-500">REAL-TIME PROFICIENCY</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<!-- Premiere Pro -->
+<div class="p-3 bg-[#0E1317] border border-slate-700/80 hover:border-emerald-400 transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-7 h-7 bg-slate-900 border border-slate-600 text-slate-200 font-monumental text-xs flex items-center justify-center font-bold">Pr</span>
+<span class="text-[11px] font-mono text-emerald-400 font-bold">96%</span>
+</div>
+<div class="font-bold text-xs text-white">Adobe Premiere</div>
+<div class="text-[10px] text-slate-400 font-mono mt-0.5">Timeline Pacing &amp; Audio</div>
+<div class="w-full bg-slate-900 h-1 mt-2 overflow-hidden">
+<div class="bg-emerald-400 h-full w-[96%]"></div>
+</div>
+</div>
+<!-- Photoshop -->
+<div class="p-3 bg-[#0E1317] border border-slate-700/80 hover:border-emerald-400 transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-7 h-7 bg-slate-900 border border-slate-600 text-slate-200 font-monumental text-xs flex items-center justify-center font-bold">Ps</span>
+<span class="text-[11px] font-mono text-emerald-400 font-bold">94%</span>
+</div>
+<div class="font-bold text-xs text-white">Adobe Photoshop</div>
+<div class="text-[10px] text-slate-400 font-mono mt-0.5">Compositing &amp; Matte</div>
+<div class="w-full bg-slate-900 h-1 mt-2 overflow-hidden">
+<div class="bg-emerald-400 h-full w-[94%]"></div>
+</div>
+</div>
+<!-- After Effects -->
+<div class="p-3 bg-[#0E1317] border border-slate-700/80 hover:border-emerald-400 transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-7 h-7 bg-slate-900 border border-slate-600 text-slate-200 font-monumental text-xs flex items-center justify-center font-bold">Ae</span>
+<span class="text-[11px] font-mono text-emerald-400 font-bold">88%</span>
+</div>
+<div class="font-bold text-xs text-white">After Effects</div>
+<div class="text-[10px] text-slate-400 font-mono mt-0.5">VFX &amp; Kinetic Motion</div>
+<div class="w-full bg-slate-900 h-1 mt-2 overflow-hidden">
+<div class="bg-emerald-400 h-full w-[88%]"></div>
+</div>
+</div>
+<!-- Lightroom -->
+<div class="p-3 bg-[#0E1317] border border-slate-700/80 hover:border-emerald-400 transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-7 h-7 bg-slate-900 border border-slate-600 text-slate-200 font-monumental text-xs flex items-center justify-center font-bold">Lr</span>
+<span class="text-[11px] font-mono text-emerald-400 font-bold">92%</span>
+</div>
+<div class="font-bold text-xs text-white">Adobe Lightroom</div>
+<div class="text-[10px] text-slate-400 font-mono mt-0.5">Color Grading Curves</div>
+<div class="w-full bg-slate-900 h-1 mt-2 overflow-hidden">
+<div class="bg-emerald-400 h-full w-[92%]"></div>
+</div>
+</div>
+<!-- CapCut Pro -->
+<div class="p-3 bg-[#0E1317] border border-slate-700/80 hover:border-emerald-400 transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-7 h-7 bg-slate-900 border border-slate-600 text-emerald-300 font-monumental text-xs flex items-center justify-center font-bold">⧉</span>
+<span class="text-[11px] font-mono text-emerald-400 font-bold">98%</span>
+</div>
+<div class="font-bold text-xs text-white">CapCut Desktop</div>
+<div class="text-[10px] text-slate-400 font-mono mt-0.5">Viral Short-Form Reels</div>
+<div class="w-full bg-slate-900 h-1 mt-2 overflow-hidden">
+<div class="bg-emerald-400 h-full w-[98%]"></div>
+</div>
+</div>
+<!-- Pixel Tool / Typography -->
+<div class="p-3 bg-[#0E1317] border border-slate-700/80 hover:border-emerald-400 transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-7 h-7 bg-emerald-950 border border-emerald-600 text-emerald-300 font-monumental text-xs flex items-center justify-center font-bold">PX</span>
+<span class="text-[11px] font-mono text-emerald-400 font-bold">90%</span>
+</div>
+<div class="font-bold text-xs text-white">Vector &amp; Pixel Art</div>
+<div class="text-[10px] text-slate-400 font-mono mt-0.5">Typography &amp; Merch</div>
+<div class="w-full bg-slate-900 h-1 mt-2 overflow-hidden">
+<div class="bg-emerald-400 h-full w-[90%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Experience, Education & Tactical Proficiency Combined -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Experience Card -->
+<div class="bg-[#090D0F] border border-slate-800 p-4 metallic-bevel">
+<div class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-1">RECORDED TIMELINE</div>
+<h5 class="font-bold text-white text-sm uppercase font-monumental tracking-wide">LEAD CONTENT CREATOR &amp; EDITOR</h5>
+<p class="text-xs text-slate-400 font-mono mt-0.5">Instagram &amp; TikTok Pipeline (2021 — PRESENT)</p>
+<ul class="mt-3 space-y-1.5 text-xs text-slate-300 font-body">
+<li class="flex items-start gap-1.5">
+<span class="text-emerald-400">▹</span> Mengembangkan 25,000+ followers organik via video pacing tajam.
+              </li>
+<li class="flex items-start gap-1.5">
+<span class="text-emerald-400">▹</span> Total 1.5M+ cumulative views di berbagai format short-form.
+              </li>
+<li class="flex items-start gap-1.5">
+<span class="text-emerald-400">▹</span> Kolaborasi visual branding merchandise &amp; apparel streetwear.
+              </li>
+</ul>
+</div>
+<!-- Education Card -->
+<div class="bg-[#090D0F] border border-slate-800 p-4 metallic-bevel">
+<div class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-1">ACADEMIC FOUNDATION</div>
+<h5 class="font-bold text-white text-sm uppercase font-monumental tracking-wide">MULTIMEDIA &amp; VISUAL LOGIC</h5>
+<p class="text-xs text-slate-400 font-mono mt-0.5">Digital Arts &amp; Media Tech (2019 — 2023)</p>
+<ul class="mt-3 space-y-1.5 text-xs text-slate-300 font-body">
+<li class="flex items-start gap-1.5">
+<span class="text-emerald-400">▹</span> Studi dinamika layout layar, hierarki teks &amp; tipografi brutalist.
+              </li>
+<li class="flex items-start gap-1.5">
+<span class="text-emerald-400">▹</span> Eksplorasi color grading cinema &amp; mood lighting kontras tinggi.
+              </li>
+<li class="flex items-start gap-1.5">
+<span class="text-emerald-400">▹</span> Disiplin autodidak intensif: riset tren audio visual kontemporer.
+              </li>
+</ul>
+</div>
+</div>
+<!-- Languages & Tactical Communication -->
+<div class="bg-[#090D0F] border border-slate-800 p-4 metallic-bevel font-mono text-xs space-y-2.5">
+<div class="flex items-center justify-between text-slate-400">
+<span>COMMUNICATION BANDWIDTH</span>
+<span class="text-emerald-400">MULTILINGUAL PROTOCOL</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+<div>
+<div class="flex justify-between mb-1 text-[11px]">
+<span class="text-slate-300">INDONESIAN (NATIVE / HIGH CREATIVE)</span>
+<span class="text-emerald-400">100%</span>
+</div>
+<div class="w-full bg-slate-900 h-1.5 border border-slate-800">
+<div class="bg-gradient-to-r from-emeraldDeep to-emeraldAccent h-full w-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1 text-[11px]">
+<span class="text-slate-300">ENGLISH (PROFESSIONAL / CREATIVE)</span>
+<span class="text-emerald-400">85%</span>
+</div>
+<div class="w-full bg-slate-900 h-1.5 border border-slate-800">
+<div class="bg-gradient-to-r from-emeraldDeep to-emeraldAccent h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutMeSection -->
+<!-- ========================================================================= -->
+<!-- BEGIN: RecapProjectsSection (Section 3) -->
+<!-- Requirement: Spotlight Image di sudut kanan, dan kartu-kartu proyek mengelilinginya -->
+<!-- ========================================================================= -->
+<section class="w-full min-h-screen py-20 px-6 sm:px-12 lg:px-16 border-b border-slate-800/80 relative flex flex-col justify-center grid-pattern" data-purpose="recap-projects-gallery" id="projects">
+<!-- Ambient background glow in corners -->
+<div class="absolute top-1/3 left-10 w-80 h-80 bg-emerald-950/25 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-10 right-10 w-96 h-96 bg-slate-800/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Watermark HUD Coordinate -->
+<div class="absolute top-10 left-10 text-[10px] font-mono text-slate-600 select-none hidden lg:block">
+    SECTOR: ARSENAL_GALLERY_2025 // ORBITAL_RIGHT_ANCHOR<br/>
+    TARGET: HIGH_FIDELITY_MOCKUPS &amp; POSTER_COMPOSITION
+  </div>
+<div class="w-full max-w-7xl mx-auto flex flex-col space-y-8 z-10">
+<!-- Header with Capsule Title & Badge & Filter Chips -->
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-5 gap-4">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900 border border-slate-700 text-xs font-mono text-emerald-400 mb-2">
+<span>EXPLORE TACTICAL ARTIFACTS</span>
+<span class="px-1.5 py-0.5 bg-emerald-950 text-emerald-300 text-[10px] font-bold border border-emerald-700/60">100% HANDCRAFTED VISUALS</span>
+</div>
+<h2 class="text-4xl sm:text-6xl font-black font-monumental uppercase tracking-wide text-white">
+          RECAP PROJECT <span class="emerald-gradient-text">2025</span>
+</h2>
+<p class="mt-1 text-sm sm:text-base text-slate-300 max-w-2xl font-body">
+          "Selamat datang di arsip visual 2025: kumpulan eksperimen terbaik saya dari desain karakter, streetwear merch, manipulasi foto, hingga infografis dinamis."
+        </p>
+</div>
+<!-- Filter buttons and inquiry hook -->
+<div class="flex flex-wrap items-center gap-2 font-display text-xs">
+<button class="px-4 py-2 bg-gradient-to-r from-emeraldDeep to-emeraldAccent text-slate-950 font-black tracking-wider cursor-pointer shadow-md shadow-emerald-950">ALL ARSENAL</button>
+<button class="px-3.5 py-2 bg-[#0E1317] border border-slate-700 text-slate-300 hover:border-emerald-400 hover:text-white transition-colors cursor-pointer">POSTERS</button>
+<button class="px-3.5 py-2 bg-[#0E1317] border border-slate-700 text-slate-300 hover:border-emerald-400 hover:text-white transition-colors cursor-pointer">STREETWEAR</button>
+<button class="px-3.5 py-2 bg-[#0E1317] border border-slate-700 text-slate-300 hover:border-emerald-400 hover:text-white transition-colors cursor-pointer">MOTION</button>
+</div>
+</div>
+<!-- 
+      ORBITAL LAYOUT:
+      Gambarnya dikelilingi dari sudut kanan!
+      Container Grid 12 kolom:
+      - Sisi Kanan (Right Corner/Upper Right): Spotlight Horizontal Artwork Doctor Doom (IMAGE_2 / IMAGE_5) dengan frame metalik mencolok
+      - Sisi Kiri & Mengalir Mengelilingi: Kartu proyek 01, 02, 03, 04, 05, 06 yang membungkus gambar dari kiri dan bawah
+    -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start" data-purpose="orbital-project-grid">
+<!-- LEFT SIDE / WRAPPING COLUMN (7 Cols): Project Cards flowing around the right corner visual -->
+<div class="lg:col-span-7 flex flex-col space-y-6 order-2 lg:order-1">
+<!-- Row: Project 01 & Project 02 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Card #01: Character Identity -->
+<div class="bg-[#0A0E11] border border-slate-800 hover:border-emerald-500/80 transition-all duration-300 p-4 metallic-bevel flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono pb-2 border-b border-slate-800 text-slate-400">
+<span class="text-emerald-400">#01 // CHARACTER IDENTITY</span>
+<span>2025 EDITION</span>
+</div>
+<div class="relative overflow-hidden aspect-video bg-black my-3 border border-slate-800">
+<!-- Inner preview horizontal -->
+<img alt="Doctor Doom Artwork Persona" class="w-full h-full object-cover object-center filter contrast-125 brightness-95 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXnQkplmVuX32PQn2OgxCM6KHAjb_3Ax6RRHX6aoC462zYoXZz8oXAVU2d9RAnhFNeRyhPKQyvwRU1OvzwljGiO40qU4_B4j521HtPYRPwAbnR9IAaJFHC8-PnITTlkkwPKS61uqM0FLSzT5WMdgMkH0E6_aUqGzFPwj6yiDeIJl8jM-kzB3nGW3OI0IlOoD5eC4N8diav95nTI4u0uKjacuXfW5-pto0zSR21Wyhp-IGt9L5mzuWJgevTB4XbpPGqhZw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 text-[10px] font-mono text-emerald-300 bg-black/80 px-2 py-0.5">
+                  SOVEREIGN NOMAD
+                </div>
+</div>
+<h4 class="font-bold text-white font-monumental tracking-wider text-base uppercase">CYBER NOMAD: PLAYER 1 IDENTITY</h4>
+<p class="text-xs text-slate-400 font-body mt-1">
+                Eksplorasi visual identitas berbasis armor brutalist dan siluet topeng berkarakter fiksi ilmiah.
+              </p>
+</div>
+<div class="pt-3 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-400 mt-3">
+<span>Photoshop / PixelCraft</span>
+<a class="text-emerald-400 hover:underline" href="mailto:reyes.var28@gmail.com?subject=Inquiry%20About%20Project%2001">VIEW SPECS →</a>
+</div>
+</div>
+<!-- Card #02: Streetwear Merch -->
+<div class="bg-[#0A0E11] border border-slate-800 hover:border-emerald-500/80 transition-all duration-300 p-4 metallic-bevel flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono pb-2 border-b border-slate-800 text-slate-400">
+<span class="text-emerald-400">#02 // STREETWEAR MERCH</span>
+<span>APPAREL LINE</span>
+</div>
+<div class="relative overflow-hidden aspect-video bg-black my-3 border border-slate-800 flex items-center justify-center p-3 bg-gradient-to-b from-[#111619] to-black">
+<div class="w-full h-full border border-slate-700/80 bg-black/90 flex flex-col items-center justify-center text-center p-2 group-hover:border-emerald-400/80 transition-colors">
+<div class="w-10 h-10 bg-emerald-950/80 border border-emerald-500/80 flex items-center justify-center text-emerald-300 text-lg font-monumental font-bold shadow-doomGreenGlow">
+                    VR
+                  </div>
+<p class="font-monumental text-white text-xs tracking-wider uppercase mt-1">HEAVY HOODIE 2025</p>
+<p class="text-[9px] font-mono text-slate-400">CYBER SCREENPRINT</p>
+</div>
+</div>
+<h4 class="font-bold text-white font-monumental tracking-wider text-base uppercase">DOOM APPAREL CAPSULE</h4>
+<p class="text-xs text-slate-400 font-body mt-1">
+                Konsep merchandise siluet oversized dengan geometri vector presisi dan cetak sablon discharge.
+              </p>
+</div>
+<div class="pt-3 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-400 mt-3">
+<span>Vector / Illustrator</span>
+<a class="text-emerald-400 hover:underline" href="mailto:reyes.var28@gmail.com?subject=Inquiry%20About%20Merch%20Capsule">CASE STUDY →</a>
+</div>
+</div>
+</div>
+<!-- Row: Project 03 Cinematic Poster & Project 04 Typography Banner -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Card #03: Cinematic Manipulation -->
+<div class="bg-[#0A0E11] border border-slate-800 hover:border-emerald-500/80 transition-all duration-300 p-4 metallic-bevel flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono pb-2 border-b border-slate-800 text-slate-400">
+<span class="text-emerald-400">#03 // CINEMATIC KEY ART</span>
+<span>COMPOSITING</span>
+</div>
+<div class="relative overflow-hidden aspect-video bg-slate-950 my-3 border border-slate-800 flex flex-col justify-end p-3">
+<div class="absolute inset-0 bg-gradient-to-tr from-black via-[#0D1612] to-slate-900 opacity-90"></div>
+<div class="relative z-10">
+<span class="text-[9px] font-mono text-emerald-400 uppercase bg-black/80 px-1.5 py-0.5 border border-emerald-600/40">LIGHTING GRADE</span>
+<h5 class="text-sm font-monumental tracking-wider text-white uppercase mt-1">NEO JAKARTA: 2025</h5>
+<p class="text-[10px] text-emerald-300 font-mono">12+ Layers Matte Painting</p>
+</div>
+</div>
+<h4 class="font-bold text-white font-monumental tracking-wider text-base uppercase">NEO-JAKARTA DYSTOPIA</h4>
+<p class="text-xs text-slate-400 font-body mt-1">
+                Poster konseptual kota metropolitan berarsitektur brutalist dengan lighting hijau emerald dingin.
+              </p>
+</div>
+<div class="pt-3 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-400 mt-3">
+<span>Photoshop Matte</span>
+<a class="text-emerald-400 hover:underline" href="mailto:reyes.var28@gmail.com?subject=Inquiry%20About%20Poster%20Compositing">BREAKDOWN →</a>
+</div>
+</div>
+<!-- Card #04: Typography & Motion Grade -->
+<div class="bg-[#0A0E11] border border-slate-800 hover:border-emerald-500/80 transition-all duration-300 p-4 metallic-bevel flex flex-col justify-between group">
+<div>
+<div class="flex justify-between items-center text-[10px] font-mono pb-2 border-b border-slate-800 text-slate-400">
+<span class="text-slate-300">#04 // DARK TYPOGRAPHY</span>
+<span>CUSTOM TYPE</span>
+</div>
+<div class="relative overflow-hidden aspect-video bg-black my-3 border border-slate-800 flex flex-col items-center justify-center p-3">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_0%,transparent_70%)]"></div>
+<h3 class="text-3xl sm:text-4xl font-monumental tracking-widest text-slate-100 group-hover:scale-105 transition-transform drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+                  VENOM // DOOM
+                </h3>
+<p class="text-[9px] font-mono text-slate-400 tracking-widest uppercase mt-0.5">METALLIC EDGE DISTORTION</p>
+</div>
+<h4 class="font-bold text-white font-monumental tracking-wider text-base uppercase">VENOM EXPERIMENTAL TYPE</h4>
+<p class="text-xs text-slate-400 font-body mt-1">
+                Eksplorasi tipografi berbobot berat untuk judul film, game cover, dan thumbnail berkontras tinggi.
+              </p>
+</div>
+<div class="pt-3 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono text-slate-400 mt-3">
+<span>Custom Kerning</span>
+<a class="text-emerald-400 hover:underline" href="mailto:reyes.var28@gmail.com?subject=Inquiry%20About%20Typography">INSPECT →</a>
+</div>
+</div>
+</div>
+<!-- Full Width Project 05: Motion Reels Banner -->
+<div class="bg-[#0A0E11] border border-slate-800 hover:border-emerald-500/80 transition-all duration-300 p-4 metallic-bevel group">
+<div class="flex flex-col sm:flex-row justify-between sm:items-center text-[10px] font-mono pb-2 border-b border-slate-800 text-slate-400 gap-1">
+<span class="text-emerald-400">#05 // MOTION REELS &amp; PACING PIPELINE</span>
+<span class="text-white font-bold">1.5M+ AGGREGATED VIEWS</span>
+</div>
+<div class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+<div class="p-2.5 bg-black border border-slate-800">
+<span class="text-emerald-400 block font-bold">HOOK ARCHITECTURE</span>
+<span class="text-slate-300 text-[11px]">3 Detik Pertama Berbobot</span>
+</div>
+<div class="p-2.5 bg-black border border-slate-800">
+<span class="text-emerald-400 block font-bold">DYNAMIC SOUND FX</span>
+<span class="text-slate-300 text-[11px]">Rhythmic Risers &amp; Hits</span>
+</div>
+<div class="p-2.5 bg-black border border-slate-800">
+<span class="text-emerald-400 block font-bold">COLOR GRADING</span>
+<span class="text-slate-300 text-[11px]">Cinematic Teal &amp; Doom Tone</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-slate-800/80 flex justify-between items-center text-[11px] font-mono">
+<span class="text-slate-400">Premiere &amp; CapCut Desktop Workflow</span>
+<a class="text-emerald-400 font-bold hover:underline" href="https://instagram.com/vicko.saris" target="_blank">
+              SEE LIVE REELS @vicko.saris ↗
+            </a>
+</div>
+</div>
+</div>
+<!-- RIGHT CORNER SPOTLIGHT ANCHOR (5 Cols): 
+           "gambarnya dikelilingi dari sudut kanan"
+           Doctor Doom Horizontal Spotlight Banner di Sudut Kanan Atas dengan Telemetry Orbit -->
+<div class="lg:col-span-5 flex flex-col space-y-4 order-1 lg:order-2" data-purpose="right-corner-spotlight">
+<!-- Big Spotlight Visual Box -->
+<div class="relative group">
+<!-- Stark Halo Glow -->
+<div class="absolute -inset-1 bg-gradient-to-tr from-emerald-500 via-slate-700 to-emerald-800 rounded-none opacity-75 blur-xl group-hover:opacity-100 transition duration-500"></div>
+<div class="relative border-2 border-emerald-600/70 bg-[#090D0F] p-2.5 metallic-bevel shadow-2xl">
+<!-- Header bar of right spotlight -->
+<div class="bg-black/90 px-3 py-1.5 border-b border-slate-800 flex items-center justify-between text-[11px] font-mono">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="text-white font-bold tracking-wider">SPOTLIGHT // SUDUT KANAN</span>
+</div>
+<span class="text-emerald-400 font-mono text-[10px]">DOOM KEY ART</span>
+</div>
+<!-- LANDSCAPE HORIZONTAL IMAGE CONTAINER FOR IMAGE_2 -->
+<div class="relative w-full aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-black flex items-center justify-center">
+<img alt="Doctor Doom Sovereign Reign Spotlight" class="w-full h-full object-cover object-center filter contrast-125 brightness-100 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDarC4XMWRmMYy3YgLyy1809V-m2lBqclkGXgkbIrqvU0gkbmh7AAGPJZaPu7ne04CSa6tySOwv1X84P53w5nkE3RmMMNEKt0Nen8SvWsLkX5cRiZydYhesG33PYo1Jpv2rYHdPFALsY2kLlcwB3G0Y-WtsvtTNd2AzphE9u8ZTcdak2MQvcP5W9ggJ63TfUYZn1A2dS2gDMC1sIBHpMn4iR43uKdWeJ85ay8ItLd6k9J6Q4vwTMuzuwnbq7k0J9o9_c10"/>
+<!-- Subtle gradient vignette -->
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/30 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 pointer-events-none"></div>
+<!-- Reticle Overlay -->
+<div class="absolute top-3 right-3 px-2 py-0.5 bg-emerald-950/90 border border-emerald-500/70 text-emerald-300 font-mono text-[10px] tracking-widest font-bold">
+                ANCHOR: CORNER_RIGHT
+              </div>
+<!-- Floating badge on spotlight -->
+<div class="absolute bottom-3 left-3 right-3 p-3 bg-black/85 backdrop-blur-md border border-slate-700 flex flex-col space-y-1">
+<div class="flex justify-between items-center text-[10px] font-mono text-emerald-400">
+<span>CORE SHOWCASE</span>
+<span>LATVERIA // REIGN 2025</span>
+</div>
+<h3 class="font-monumental text-white text-lg tracking-wider uppercase leading-none">
+                  THE OVERLORD MONOLITH
+                </h3>
+<p class="text-[11px] text-slate-300 font-mono">
+                  Visual pusat kekuasaan estetika: kontras hitam pekat, jubah hijau zamrud, dan pantulan baja krom.
+                </p>
+</div>
+</div>
+<!-- Bottom telemetry for Spotlight -->
+<div class="bg-black/90 p-3 border-t border-slate-800 text-[11px] font-mono space-y-2 mt-1">
+<div class="flex justify-between text-slate-400">
+<span>ART DIRECTION:</span>
+<span class="text-white">Monumental Brutalism</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>COLOR HARMONY:</span>
+<span class="text-emerald-400">Charcoal + Emerald + Steel</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>PRODUCTION YEAR:</span>
+<span class="text-white">2025 Master Collection</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Surrounding Orbital Tactical Box 1: Client Endorsement / Metric -->
+<div class="bg-[#090D0F] border border-slate-800 p-4 metallic-bevel">
+<div class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-1">ORBITAL DATA WRAP // TELEMETRY</div>
+<h5 class="text-sm font-monumental text-white tracking-wide uppercase">DYNAMIC CONTENT RETENTION RATE</h5>
+<div class="mt-2 space-y-2 font-mono text-xs">
+<div>
+<div class="flex justify-between text-slate-300 mb-0.5 text-[11px]">
+<span>AVERAGE 3S RETENTION</span>
+<span class="text-emerald-400 font-bold">82.4%</span>
+</div>
+<div class="w-full bg-slate-900 h-1.5 border border-slate-800">
+<div class="bg-emerald-400 h-full w-[82.4%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-300 mb-0.5 text-[11px]">
+<span>ENGAGEMENT TO FOLLOW CONVERSION</span>
+<span class="text-emerald-400 font-bold">14.8%</span>
+</div>
+<div class="w-full bg-slate-900 h-1.5 border border-slate-800">
+<div class="bg-emerald-400 h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex justify-between items-center">
+<span>READY FOR NEW COMMISSIONS</span>
+<a class="text-emerald-400 font-bold hover:underline" href="mailto:reyes.var28@gmail.com">BOOK NOW →</a>
+</div>
+</div>
+<!-- Surrounding Orbital Tactical Box 2: Quick Links to Creator Github & Social -->
+<div class="bg-[#090D0F] border border-slate-800 p-4 metallic-bevel flex flex-col space-y-2 font-mono text-xs">
+<div class="text-[10px] text-slate-400 uppercase">DIRECT ASSET REPOSITORIES</div>
+<a class="p-2 bg-black border border-slate-800 hover:border-emerald-500 text-slate-200 flex justify-between items-center transition-colors" href="https://github.com/Vinzzzzzz28-lang" target="_blank">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 bg-emerald-400"></span> GitHub Profile
+            </span>
+<span class="text-emerald-400">Vinzzzzzz28-lang ↗</span>
+</a>
+<a class="p-2 bg-black border border-slate-800 hover:border-emerald-500 text-slate-200 flex justify-between items-center transition-colors" href="https://instagram.com/vicko.saris" target="_blank">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 bg-emerald-400"></span> Instagram Official
+            </span>
+<span class="text-emerald-400">@vicko.saris ↗</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RecapProjectsSection -->
+<!-- ========================================================================= -->
+<!-- BEGIN: ContactAndOutroSection (Section 4) -->
+<!-- Requirement:
+  - Hapus YouTube, TikTok, Pinterest.
+  - Hanya 3 kontak: Instagram (vicko.saris), Gmail (reyes.var28@gmail.com), GitHub (Vinzzzzzz28-lang).
+  - Tampilkan IMAGE_2 dalam format horizontal landscape.
+  - Elemen padat futuristik brutalist.
+-->
+<!-- ========================================================================= -->
+<section class="w-full min-h-screen py-20 px-6 sm:px-12 lg:px-16 relative flex flex-col justify-between grid-pattern" data-purpose="contact-and-outro-screen" id="contact">
+<!-- Ambient background glow -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-96 bg-emerald-950/25 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-80 h-80 bg-slate-800/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Watermark HUD Coordinates -->
+<div class="absolute top-12 left-8 text-[10px] font-mono text-slate-600 select-none hidden lg:block">
+    COMMS_TERMINAL: 04 // FINAL_DECREE<br/>
+    INBOX: DIRECT_OPEN // PROTOCOL: ENCRYPTED_GMAIL
+  </div>
+<div class="w-full max-w-7xl mx-auto my-auto py-8 z-10 flex flex-col space-y-12">
+<!-- Top Horizontal Landscape Showcase Banner with IMAGE_2 -->
+<div class="relative w-full group" data-purpose="contact-horizontal-banner">
+<div class="absolute -inset-1 bg-gradient-to-r from-emerald-600/40 via-slate-700/40 to-emerald-900/40 blur-lg group-hover:opacity-100 transition-opacity"></div>
+<div class="relative w-full border border-slate-700/80 bg-[#090D0F] p-2 metallic-bevel shadow-doomGreenGlow">
+<!-- Landscape Horizontal 21:9 Aspect Ratio -->
+<div class="relative w-full aspect-[21/9] sm:aspect-[24/8] overflow-hidden bg-black flex items-center justify-center">
+<img alt="Doctor Doom Monumental Presence - Contact Header" class="w-full h-full object-cover object-center filter contrast-125 brightness-95 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDarC4XMWRmMYy3YgLyy1809V-m2lBqclkGXgkbIrqvU0gkbmh7AAGPJZaPu7ne04CSa6tySOwv1X84P53w5nkE3RmMMNEKt0Nen8SvWsLkX5cRiZydYhesG33PYo1Jpv2rYHdPFALsY2kLlcwB3G0Y-WtsvtTNd2AzphE9u8ZTcdak2MQvcP5W9ggJ63TfUYZn1A2dS2gDMC1sIBHpMn4iR43uKdWeJ85ay8ItLd6k9J6Q4vwTMuzuwnbq7k0J9o9_c10"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/20 to-black/90"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+<!-- In-banner header metadata -->
+<div class="absolute top-4 left-4 right-4 flex justify-between items-center text-[11px] font-mono">
+<span class="px-2.5 py-1 bg-black/85 border border-emerald-500/50 text-emerald-400">
+              COMMUNICATIONS GATEWAY // LATVERIA FORGE
+            </span>
+<span class="hidden sm:inline px-2.5 py-1 bg-black/85 border border-slate-700 text-slate-400">
+              STATUS: READY TO FORGE NEW ALLIANCES
+            </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
+<div>
+<p class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">TRANSMISSION FREQUENCY</p>
+<h3 class="text-xl sm:text-3xl font-monumental text-white tracking-widest uppercase">
+                VICKO ARDIANSYAH REYES
+              </h3>
+<p class="text-xs text-slate-300 font-mono">Available for Visual Design, Commercial Video Editing &amp; Content Direction</p>
+</div>
+<a class="px-4 py-2 bg-gradient-to-r from-emeraldDeep to-emeraldAccent text-slate-950 font-monumental font-bold text-xs tracking-widest uppercase hover:brightness-110 shadow-doomGreenGlow transition-all" href="mailto:reyes.var28@gmail.com">
+              SEND EMAIL DIRECTLY
+            </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid: Left Side 3 Verified Socials & Telemetry, Right Side Massive THANK YOU 2025 & Pitch -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left Side (5 Cols): The ONLY 3 Required Social / Contacts + Verification Badge -->
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<!-- Designation Card -->
+<div class="bg-[#090D0F] border border-slate-800 p-5 metallic-bevel">
+<div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+<div>
+<span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest block">AUTHENTICATED TRANSMISSIONS</span>
+<h3 class="text-2xl font-black font-monumental text-white tracking-wider uppercase">
+                OFFICIAL CONTACT DIRECTORY
+              </h3>
+</div>
+<span class="w-3 h-3 bg-emerald-400 rounded-full shadow-[0_0_8px_#34d399]"></span>
+</div>
+<p class="text-xs text-slate-400 font-body mb-4">
+            Hubungi saya secara langsung melalui salah satu dari 3 kanal resmi berikut. Respon cepat untuk tawaran proyek komersial, editing, atau kolaborasi kreatif:
+          </p>
+<!-- EXACT 3 CONTACTS REQUIRED -->
+<div class="flex flex-col space-y-3 font-mono text-xs" data-purpose="required-contacts-trio">
+<!-- 1. Instagram: vicko.saris -->
+<a class="group flex items-center justify-between p-3.5 bg-black/80 border border-slate-800 hover:border-emerald-400 hover:bg-[#0E1513] transition-all metallic-bevel" href="https://instagram.com/vicko.saris" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-slate-900 border border-slate-700 flex items-center justify-center font-bold text-emerald-400 group-hover:border-emerald-400">
+                  IG
+                </span>
+<div>
+<span class="text-white font-bold block text-sm">INSTAGRAM</span>
+<span class="text-slate-400 text-xs">@vicko.saris</span>
+</div>
+</div>
+<span class="text-emerald-400 group-hover:translate-x-1 transition-transform">CONNECT ↗</span>
+</a>
+<!-- 2. Gmail: reyes.var28@gmail.com -->
+<a class="group flex items-center justify-between p-3.5 bg-black/80 border border-emerald-700/60 hover:border-emerald-400 hover:bg-[#0E1513] transition-all metallic-bevel shadow-[0_0_15px_rgba(16,185,129,0.15)]" href="mailto:reyes.var28@gmail.com">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-emerald-950 border border-emerald-500 flex items-center justify-center font-bold text-emerald-300">
+                  ✉
+                </span>
+<div>
+<span class="text-white font-bold block text-sm">GMAIL DIRECT</span>
+<span class="text-emerald-400 text-xs font-mono font-semibold">reyes.var28@gmail.com</span>
+</div>
+</div>
+<span class="text-emerald-400 font-bold group-hover:translate-x-1 transition-transform">SEND MAIL ↗</span>
+</a>
+<!-- 3. GitHub: Vinzzzzzz28-lang -->
+<a class="group flex items-center justify-between p-3.5 bg-black/80 border border-slate-800 hover:border-emerald-400 hover:bg-[#0E1513] transition-all metallic-bevel" href="https://github.com/Vinzzzzzz28-lang" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 bg-slate-900 border border-slate-700 flex items-center justify-center font-bold text-slate-300 group-hover:border-emerald-400">
+                  GH
+                </span>
+<div>
+<span class="text-white font-bold block text-sm">GITHUB</span>
+<span class="text-slate-400 text-xs">Vinzzzzzz28-lang</span>
+</div>
+</div>
+<span class="text-emerald-400 group-hover:translate-x-1 transition-transform">INSPECT ↗</span>
+</a>
+</div>
+</div>
+<!-- Telemetry Service Guarantee / SLA Box -->
+<div class="bg-[#090D0F] border border-slate-800 p-4 metallic-bevel font-mono text-xs space-y-2">
+<div class="flex justify-between items-center text-slate-400 border-b border-slate-800 pb-2">
+<span>SERVICE LEVEL AGREEMENT</span>
+<span class="text-emerald-400">TACTICAL SPEED</span>
+</div>
+<div class="space-y-1.5 text-[11px] text-slate-300">
+<div class="flex justify-between">
+<span>RESPONSE TIME:</span>
+<span class="text-white">&lt; 12 Jam via Gmail</span>
+</div>
+<div class="flex justify-between">
+<span>INITIAL CUT PREVIEW:</span>
+<span class="text-white">2 - 3 Hari Kerja</span>
+</div>
+<div class="flex justify-between">
+<span>COMMERCIAL REVISION ROUNDS:</span>
+<span class="text-emerald-400">Hingga 100% Puas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side (7 Cols): Monumental THANK YOU 2025 & Collaboration CTA -->
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<div class="inline-block px-3 py-1 bg-slate-900 border border-slate-700 text-xs font-mono text-emerald-400 tracking-[0.2em] w-fit">
+          TERMINAL REACHED // DECREE CONCLUDED
+        </div>
+<!-- Massive Monumental DOOM Typography -->
+<h2 class="text-6xl sm:text-8xl lg:text-9xl font-black font-monumental tracking-tight text-white uppercase leading-none select-none">
+          THANK YOU <br/>
+<span class="emerald-gradient-text drop-shadow-[0_0_35px_rgba(78,172,122,0.5)]">2025</span>
+</h2>
+<!-- Collaboration Pitch from Document Copywriting -->
+<div class="p-6 bg-[#0B0F12] border border-emerald-700/50 backdrop-blur-md metallic-bevel">
+<h4 class="font-display font-bold text-white text-base mb-2 flex items-center gap-2">
+<span class="text-emerald-400">⚔</span> MARI MULAI KOLABORASI BARU
+          </h4>
+<p class="text-slate-300 font-body text-sm leading-relaxed">
+            "Punya ide seru yang siap dieksekusi atau butuh partner kreatif untuk boost performa visual brand kamu? Pintu kolaborasi selalu terbuka lebar—mari ngobrol santai dan wujudkan bareng lewat email langsung di 
+            <a class="text-emerald-400 underline font-semibold" href="mailto:reyes.var28@gmail.com">reyes.var28@gmail.com</a> 
+            atau direct message Instagram saya di 
+            <a class="text-emerald-400 underline font-semibold" href="https://instagram.com/vicko.saris" target="_blank">@vicko.saris</a>!"
+          </p>
+</div>
+<!-- Direct CTA Action Buttons -->
+<div class="flex flex-wrap gap-4 pt-2">
+<!-- Direct Email Button -->
+<a class="px-7 py-4 bg-gradient-to-r from-emeraldDeep to-emeraldAccent hover:brightness-110 text-slate-950 font-monumental font-black text-base tracking-widest uppercase transition-all shadow-doomGreenGlow flex items-center gap-2" href="mailto:reyes.var28@gmail.com">
+<span>✉</span> FORGE COLLABORATION (GMAIL)
+          </a>
+<!-- Return to Top Button -->
+<a class="px-6 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-400 font-display font-bold text-sm tracking-wider uppercase transition-all flex items-center gap-2 metallic-bevel" href="#hero">
+<span>▲</span> RETURN TO ZENITH
+          </a>
+</div>
+<!-- Previous Archives & Logs (Past Footprints) -->
+<div class="pt-6 border-t border-slate-800/80 w-full">
+<p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-3">HISTORICAL LOGS &amp; PREVIOUS ARCHIVES</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono">
+<div class="p-3 bg-black border border-slate-800 hover:border-slate-600 transition-colors metallic-bevel">
+<p class="text-xs font-bold text-white font-monumental tracking-wider">PORTOFOLIO. 2023</p>
+<p class="text-[10px] text-slate-500">Foundations, Graphic Log &amp; Static Arts</p>
+</div>
+<div class="p-3 bg-black border border-slate-800 hover:border-slate-600 transition-colors metallic-bevel">
+<p class="text-xs font-bold text-white font-monumental tracking-wider">DESIGN PORTFOLIO 2024</p>
+<p class="text-[10px] text-slate-500">Motion Kinetics, Reels &amp; Video Edits</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Copyright & Terminal Bottom Bar -->
+<footer class="w-full max-w-7xl mx-auto pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-xs font-mono text-slate-500 gap-3 z-10">
+<div>
+      © 2025 VICKO ARDIANSYAH REYES // DOOM EDITION • ALL RIGHTS RESERVED
+    </div>
+<div class="flex items-center gap-4 text-[11px]">
+<a class="text-emerald-400 hover:underline" href="mailto:reyes.var28@gmail.com">reyes.var28@gmail.com</a>
+<span>•</span>
+<a class="hover:text-white" href="https://instagram.com/vicko.saris" target="_blank">@vicko.saris</a>
+<span>•</span>
+<a class="hover:text-white" href="https://github.com/Vinzzzzzz28-lang" target="_blank">Vinzzzzzz28-lang</a>
+<span>•</span>
+<span>JAKARTA, INDONESIA</span>
+</div>
+</footer>
+</section>
+<!-- END: ContactAndOutroSection -->
+</main>
+</body></html>
